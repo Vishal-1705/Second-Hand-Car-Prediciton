@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index Page</title>
+</head>
+
+<body>
+    <form action="{{ url_for("predict") }}" method="post">
+    <h1>Fill the details below:</h1>
+    <h3>The year car was bought:</h3>
+    <input id="first" name="Year" type="number">
+    <h3>Current showroom price:</h3>
+    <input id="second" name="Present_Price" required="required">
+    <h3>Kilometers Driven:</h3>
+    <input id="third" name="Kms_Driven" required="required">
+    <h3>No of previous owners(0 or 1 or 3):</h3>
+    <input id="fourth" name="Owner" required="required">
+    <h3>Fuel Type:</h3>
+    <select name="Fuel_Type_Petrol" id="fuel" required="required">
+        <option value="Petrol">Petrol</option>
+        <option value="Diesel">Diesel</option>
+        <option value="CNG">CNG</option>
+    </select>
+    <h3>Dealer/Individual:</h3>
+    <select name="Seller_Type_Individual" id="resea" required="required">
+         <option value="Dealer">Dealer</option>
+         <option value="Individual">Individual</option>
+    </select>
+    <h3>Transmission Type:</h3>
+    <select name="Transmission_Manual" id="research" required="required">
+         <option value="Manual">Manual Car</option>
+         <option value="Automatic">Automatic Car</option>
+    </select>
+    <button id="sub" type="submit">Calculate the Selling Price</button>
+    </form>
+
+</body>
+
+<h3> {{ prediction_text }} </h3>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
